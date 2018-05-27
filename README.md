@@ -92,7 +92,7 @@ console.log(new_array);         // [true, 2]
 ```
 #### `splice()` -
 `Splice()` has very similar use cases like `concat()` and `splice()`, the only difference is that
-***the operation is made on the original array.
+***the operation is made on the original array.***
 
 It's a destructive method, you won't be able to revert it, so be careful to that when using it.
 
@@ -113,7 +113,7 @@ console.log(arr);                // [1, 2, 3, "4"]
 
 Iterative methods are very versatile and used in many scenarios. You will most likely encounter them even when working with the latest frameworks as well (angular, react, vue).
 
-You will provide a function which will be applied on every element on that array. The function will receive the array element as parameter and perform the operation. Optionally, the function takes other 2 arguments - `index` with the index of the elemnt in the list and `array` - a reference to the original array. If you are using them, you have to be careful to ***avoid modifying the array argument** since this will affect the original array and cause unpleasant side effects.
+You will provide a function which will be applied on every element on that array. The function will receive the array element as parameter and perform the operation. Optionally, the function takes other 2 arguments - `index` with the index of the elemnt in the list and `array` - a reference to the original array. If you are using them, you have to be careful to ***avoid modifying the array argument*** since this will affect the original array and cause unpleasant side effects.
 
 Alongside the function, you can also provide a scope object - a reference to an object which will serve as ~`this` inside the function.
 
