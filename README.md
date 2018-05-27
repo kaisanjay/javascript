@@ -118,10 +118,15 @@ You will provide a function which will be applied on every element on that array
 Alongside the function, you can also provide a scope object - a reference to an object which will serve as ~`this` inside the function.
 
 `every()` – returns true if function returns true on every item
+
 `filter()` – returns an array of all items for which the function returns true
-`forEach()` – no return value (just run the function on every element in the list)
+
+`forEach()` – no return value (just run the function on every element in the list
+
 `map()` – returns a new list with the result of each item in an array
+
 `some()` – returns true if the function returns true for at least one of the items
+
 
 ```
 var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
