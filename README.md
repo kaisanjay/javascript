@@ -145,6 +145,50 @@ numbers.forEach(item => console.log("works"));
 var numbers_plus_one = numbers.map(item => item + 1);
 console.log(numbers_plus_one);
 
+
+
+
+
+
+
 ```
 ### Reduction Methods
+
+As the name suggested, a reduction function reduce an array to a single result.
+
+For example, let's imagine a list of numeric values. If I want to know the sum of all elements, I will take a variable sum which is initally 0 and iterate over the array. Each element will be added to my variable and, at the end of iteration, the result will be sum.
+
+This is a perfect example of a reduce operation. I'm appling an operation to all items, progressively building the result. At each interation, I will have a partial result - the sum of elements I added so far - and the value of the element.
+
+Reduce function are mostly used for calculating sums, concatenating values and all operation that can be applied to multiple values in order to get one result. The 1st argument of the reducer will be the function which will be called for each item. The function will have 2 parameter myFun(partial_result, current_item) and must return the partial result after dealing with the current item. Optionally, like in the case of iterative methods, it can take other 2 arguments - index and array -.
+
+The second argument - initial_value - represent the partial result we will have at the first call. This would be equivalent with initializing our sum with 0 before the start of the iteration. At the first call of the function, current_item will be the first item in the list and partial_result will be initial value. If the second argument is not provided, the reduction will start at the second item in the list. In the first call, current_item will be the second item and partial_result will be the first item in the list. This is very convenient for some cases, including in our example.
+
+Javascript provides 2 reducer function: reduce() and reduceRight() - which iterates the elements starting from the end of the array -.
+
+```
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+var total = numbers.reduce(function(sum, value) {
+return sum + value;
+}, 0);
+
+console.log(total);
+
+
+// here I don't provide the seconds argument (initial value) -> 
+// at first call, sum = numbers[0] and value = numbers[1] so the result is the same
+var total = numbers.reduce(function(sum, value) {
+return sum + value;
+});
+
+console.log(total);
+
+
+var concatenate = numbers.reduceRight((str, value) => str = str + value, '');
+console.log(concatenate); // '987654321'
+
+// we start from '' add concatenate each value, starting from the right
+
+```
 
