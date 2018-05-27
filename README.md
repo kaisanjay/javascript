@@ -66,12 +66,12 @@ arr.push(first_item);
 
 
 ### Reordering methods
-#### `reverse()` -
+#### `reverse()` - (original array will not be affected)
 The function creates a duplicate of the original array and reverse the order of the elements. Again, the original array will not be affected.
 
 #### `sort()` -
 
-#### `concat()` -
+#### `concat()` -(original array will not be affected.)
 Creates a new array based on the elements in the current array. It's important to know that the original array is not altered. The operation is made on the copy of that array. ` concat()` accepts any number of arguments which will be added at the end of the array. Using it without arguments is a elegent way to clone the initial array.
 ```
 var arr = [true, 2, 3, "4"];
@@ -79,7 +79,7 @@ new_array = arr.concat(5, 6, 7)
 console.log(new_array);         // [true, 2, 3, "4", 5, 6, 7]
 ```
 
-#### `slice()`
+#### `slice()` - (original array will not be affected.)`
 Similar to `concat()`, slice creates a copy of the array and extracts a subsequence of it. Used with no parameters, it returns a copy of the original. With one argument - index -, returns all elements from that index to the end. Additionally, it can be used with 2 arguments - start_index and end_index, in which case it will return all elements in that interval (excluding the one from last_index).
 
 The function can be used with a negative value as parameter. In this case, the start index will be counted from the end of the array - start_index = array.length - param
@@ -107,5 +107,44 @@ var arr = [true, 2, 3, "4"];
 arr.splice(0, 1, 1); // I replace the first item with 1
 console.log(arr);                // [1, 2, 3, "4"]
 
-````
 ```
+
+### Iterative methods -
+
+Iterative methods are very versatile and used in many scenarios. You will most likely encounter them even when working with the latest frameworks as well (angular, react, vue).
+
+You will provide a function which will be applied on every element on that array. The function will receive the array element as parameter and perform the operation. Optionally, the function takes other 2 arguments - `index` with the index of the elemnt in the list and `array` - a reference to the original array. If you are using them, you have to be careful to ***avoid modifying the array argument** since this will affect the original array and cause unpleasant side effects.
+
+Alongside the function, you can also provide a scope object - a reference to an object which will serve as ~`this` inside the function.
+
+`every()` – returns true if function returns true on every item
+`filter()` – returns an array of all items for which the function returns true
+`forEach()` – no return value (just run the function on every element in the list)
+`map()` – returns a new list with the result of each item in an array
+`some()` – returns true if the function returns true for at least one of the items
+
+```
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var every_result_is_smaller_than_9 = numbers.every(item => item < 9);
+
+// this is equivalent with 
+var every_result_is_smaller_than_9 = numbers.every(function(item) { return item < 9; });
+
+
+console.log(every_result_is_smaller_than_9);  // false
+
+var some_resulst_are_smaller_than_9 = numbers.some(item => item < 9);
+console.log(some_resulst_are_smaller_than_9); // true
+
+var odd_numbers = numbers.filter(item => item % 2 == 1);
+console.log(odd_numbers);        // [1, 3, 5, 7, 9]
+
+numbers.forEach(item => console.log("works"));
+
+
+var numbers_plus_one = numbers.map(item => item + 1);
+console.log(numbers_plus_one);
+
+```
+### Reduction Methods
+
