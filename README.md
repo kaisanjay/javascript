@@ -27,6 +27,8 @@ var arr = [1, 2, 3, 4];
 console.log(arr.length); // 4
 arr[30] = 2; 
 console.log(arr.length); // 31 - even though there are no elements between index 5 and 29
+console.log(arr); // [1, 2, 3, 4, empty × 26, 2]
+
 
 ```
 ## Array methods -
