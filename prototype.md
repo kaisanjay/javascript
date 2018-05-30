@@ -4,7 +4,7 @@ When you reference a property on an object, if that property doesn’t exist, Ja
 The internal prototype reference linkage from one object to its fallback happens at the time the object is created. The simplest way to illustrate it is with a built-in utility called `Object.create(..)`.
 
 consider:
-,,,
+```
 var foo = {
     a: 42
 };
@@ -16,7 +16,7 @@ bar.b = "hello world";
 
 bar.b;      // "hello world"
 bar.a;      // 42 <-- delegated to `foo`
-,,,
+```
 The a property doesn’t actually exist on the bar object, but because bar is prototype-linked to foo, JavaScript automatically falls back to looking for a on the foo object, where it’s found.
 
 This linkage may seem like a strange feature of the language. The most common way this feature is used—and I would argue, abused—is to try to emulate/fake a “class” mechanism with “inheritance.”
