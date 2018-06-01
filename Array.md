@@ -1,7 +1,8 @@
-# Javascript
+
 
 
 # Array
+
 
 ## Declaring an array
 
@@ -16,6 +17,14 @@ There is an alternative to that, the Array constructor:
 
 ### use array literals instead of the Array constructor
 ### the Array constructor behaves differently if its only argument is a number.
+
+> Note-
+
+
+```
+arrays are numerically indexed (as you’d expect), but the tricky thing is that they also are
+objects that can have string keys/properties added to them (but which don’t count toward the length of the array):
+```
 
 
 ## The `length` property--
