@@ -30,3 +30,14 @@ but this problem can be solved by filter very easily watch
 arr.filter(new_pupu); // [3, 4]
 
 ```
+
+> Challenge
+```
+var arr = []
+arr[0] = 0
+arr["one"] = 1
+arr["2"] = 2
+arr.length = ?
+
+// ans: 3
+```
