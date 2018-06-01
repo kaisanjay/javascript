@@ -21,9 +21,9 @@ There is an alternative to that, the Array constructor:
 
 
 
-
-```
 > Note-
+```
+
 
 arrays are numerically indexed (as you’d expect), but the tricky thing is that they also are
 objects that can have string keys/properties added to them (but which don’t count toward the length of the array)
@@ -45,8 +45,10 @@ a["foobar"];    // 2
 a.foobar;       // 2
 
 
-> Generally, it’s not a great idea to add string keys/properties to arrays. Use objects for holding values in keys/properties, and save arrays for strictly numerically indexed values.
 ```
+> Generally, it’s not a great idea to add string keys/properties to arrays. 
+> Use objects for holding values in keys/properties, and save arrays for strictly numerically indexed values.
+
 
 
 ## The `length` property--
