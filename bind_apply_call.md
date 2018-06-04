@@ -69,5 +69,41 @@ If you observe the call function takes two arguments:
 - Context
 - Function arguments
 
-A context is an object that replaces this keyword inside the area function.
+A context is an object that replaces `this` keyword inside the area function.
 Later arguments are passed as function arguments.
+
+```
+var cylinder = {
+    pi: 3.14,
+    volume: function(r, h) {
+        return this.pi * r * r * h;
+    }
+};
+
+cylinder.volume.call({pi: 3.14159}, 2, 6);
+75.39815999999999
+```
+
+Did you see those function arguments are passed as subsequent arguments after context object.
+
+Apply is exactly same except Function arguments are passed as a list
+
+```
+cylinder.volume.apply({pi: 3.14159}, [2, 6]);
+75.39815999999999
+```
+
+> Bind attaches a brand new this to a given function. In bind’s case, the function is not executed instantly like Call Apply.
+```
+var newVolume = cylinder.volume.bind({pi: 3.14159}); // This is not instant call
+// After some long time, somewhere in the wild 
+newVolume(2,6); // Now pi is 3.14159
+```
+
+> What is the use of Bind?
+It allows us to inject a context into a function which returns a new function with updated context. 
+It means this variable will be user supplied variable. This is very useful while working with JavaScript events.
+
+### now you can understand 
+
+My understanding -- `.bind()` affects permanently after its call
