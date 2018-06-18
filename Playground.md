@@ -41,3 +41,34 @@ arr.length = ?
 
 // ans: 3
 ```
+
+# string reverse
+
+```
+function reverse(a){
+	var b='';
+	for(let i = a.length ; i>0; i--){
+		b= `${b}${a[i-1]}`}
+	return b;}
+ ```
+ 
+ 
+ # prime number true or false
+ ```
+ ```
+ 
+function isPrime(n){
+  var divisor = 2;
+
+  while (n > divisor){
+    if(n % divisor == 0){
+     return false; 
+    }
+    else
+      divisor++;
+  }
+  return true;
+}
+```
+
+ 
