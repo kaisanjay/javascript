@@ -52,6 +52,18 @@ function reverse(a){
 	return b;}
  ```
  
+ > Question: Can you make reverse function as string extension?
+ 
+ > Ans. 
+ ```
+ String.prototype.reverse = function reverse(){
+						var b='';
+						for(let i = this.length ; i>0; i--){
+							b= `${b}${this[i-1]}`}
+						return b;}
+						
+```
+ 
  
  # prime number true or false
  ```
