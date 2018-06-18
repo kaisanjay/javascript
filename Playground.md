@@ -67,7 +67,7 @@ function reverse(a){
  
  # prime number true or false
  ```
- ```
+
  
 function isPrime(n){
   var divisor = 2;
