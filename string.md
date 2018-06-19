@@ -32,6 +32,8 @@ know `split()` `join()` `reverse()` properly
 
 `("i am sanjay").split(" ").join("") // "iamsanjay"`
 
-`("i am sanjay").split(" ").join(" ")  // "i am sanjay"
+`("i am sanjay").split(" ").join(" ")  // "i am sanjay"`
 
 
+substr();
+charAt();
