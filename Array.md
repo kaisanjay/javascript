@@ -113,7 +113,8 @@ console.log(new_array);         // [true, 2, 3, "4", 5, 6, 7]
 ```
 
 #### `slice()` - (original array will not be affected.)`
-Similar to `concat()`, slice creates a copy of the array and extracts a subsequence of it. Used with no parameters, it returns a copy of the original. With one argument - index -, returns all elements from that index to the end. Additionally, it can be used with 2 arguments - start_index and end_index, in which case it will return all elements in that interval (excluding the one from last_index).
+Similar to `concat()`, slice creates a copy of the array and extracts a subsequence of it. Used with no parameters, it returns a copy of the original. With one argument - index -, returns all elements from that index to the end. Additionally, it can be used with 2 arguments - start_index and end_index, in which case it will return all elements in that interval
+(**excluding** the one from last_index).
 
 The function can be used with a negative value as parameter. In this case, the start index will be counted from the end of the array - start_index = array.length - param
 
