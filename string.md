@@ -20,6 +20,9 @@ function reverseString(str) {
 reverseString("hello");
 
 
+
+
+
 ```
 
 know `split()` `join()` `reverse()` properly
@@ -37,3 +40,13 @@ know `split()` `join()` `reverse()` properly
 
 substr();
 charAt();
+
+
+
+
+-------
+
+What is the difference between slice() and substr() in JavaScript?
+
+- string.slice(beginIndex, endIndex)
+- string.substr(beginIndex, length);
