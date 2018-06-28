@@ -1,9 +1,9 @@
-- syntax parser
-- execution context
+## syntax parser
+## execution context
    * Creation and Hoisting ` Sets up the functions and variables in the memory`
    * Code Execution        `Runs your code line by line`
-- lexical environment
-- single threded
+## lexical environment
+## single threded
 
 
 ------
@@ -19,7 +19,7 @@ a // 10
 window.a //10
 ```
 
-- call by reference vs. by value
+## call by reference vs. by value
   1. Primitive type variable like string,number are always pass as pass by value.
   2. Array and Object is passed as pass by reference or pass by value based on these two condition.
      - if you are changing value of that Object or array with new Object or Array then it is pass by Value.
