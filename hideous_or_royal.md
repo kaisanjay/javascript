@@ -39,7 +39,8 @@ window.a //10
 
         here you are changing a property value of old object.you are not assigning new object or array to old one.so it is pass by reference.
         
-        
+Example
+1.
 ```
 
     function passVar(object1, object2, number1) {
@@ -69,3 +70,27 @@ Output: -
     bike
     10
 ```
+Example
+2.
+```
+function changeParam(x, y, z) {
+  x = 3;
+  y = "new string";
+  z["key2"] = "new";
+  z["key3"] = "newer";
+
+  z = {"new" : "object"};
+}
+
+var a = 1,
+    b = "something",
+    c = {"key1" : "whatever", "key2" : "original value"};
+
+changeParam(a, b, c);
+
+console.log(c)
+// 
+
+{key1: "whatever", key2: "new", key3: "newer"}
+```
+
