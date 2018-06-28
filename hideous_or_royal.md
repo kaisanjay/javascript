@@ -1,9 +1,9 @@
-## syntax parser
-## execution context
+### syntax parser
+### execution context
    * Creation and Hoisting ` Sets up the functions and variables in the memory`
    * Code Execution        `Runs your code line by line`
-## lexical environment
-## single threded
+### lexical environment
+### single threded
 
 
 ------
@@ -19,7 +19,7 @@ a // 10
 window.a //10
 ```
 
-## call by reference vs. by value
+### call by reference vs. by value
   1. Primitive type variable like string,number are always pass as pass by value.
   2. Array and Object is passed as pass by reference or pass by value based on these two condition.
      - if you are changing value of that Object or array with new Object or Array then it is pass by Value.
@@ -94,3 +94,41 @@ console.log(c)
 {key1: "whatever", key2: "new", key3: "newer"}
 ```
 
+- Basic explanation
+  ```
+  // by value (primitives)
+  var a = 3;
+  var b;
+
+  b = a;
+  a = 2;
+
+  console.log(a);
+  console.log(b);
+```
+
+```
+    // by reference (all objects (including functions))
+    var c = { greeting: 'hi' };
+    var d;
+
+    d = c;
+    c.greeting = 'hello'; // mutate
+
+    console.log(c);
+    console.log(d);
+
+    // by reference (even as parameters)
+    function changeGreeting(obj) {
+        obj.greeting = 'Hola'; // mutate   
+    }
+
+    changeGreeting(d);
+    console.log(c);
+    console.log(d);
+
+    // equals operator sets up new memory space (new address)
+    c = { greeting: 'howdy' };
+    console.log(c);
+    console.log(d);
+```
