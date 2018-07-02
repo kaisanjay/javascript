@@ -132,3 +132,7 @@ console.log(c)
     console.log(c);
     console.log(d);
 ```
+
+
+## Arguments object
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
