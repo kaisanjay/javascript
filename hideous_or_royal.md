@@ -130,15 +130,15 @@ console.log(c)
     // equals operator sets up new memory space (new address)
     c = { greeting: 'howdy' };
     console.log(c);
-    console.log(d);
-```
+    console.log(d);```
 
 
 ## Arguments object
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
 
+
 ```
-    function greet(firstname, lastname, language) {
+function greet(firstname, lastname, language) {
  
     language = language || 'en';
     
@@ -157,12 +157,11 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/argu
     
 }
 
-    greet();
-    greet('John');
-    greet('John', 'Doe');
-    greet('John', 'Doe', 'es');
+greet();
+greet('John');
+greet('John', 'Doe');
+greet('John', 'Doe', 'es');
 
-    // in ES6 I can do:  function greet(firstname, ...other)
-    // and 'other' will be an array that contains the rest of the arguments
+// in ES6 I can do:  function greet(firstname, ...other)
+// and 'other' will be an array that contains the rest of the arguments
 ```
-
