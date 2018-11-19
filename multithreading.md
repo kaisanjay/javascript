@@ -1,3 +1,8 @@
+```
+In the starting of an application all javascript code run till completion and placed
+in a call stack in execution order.
+```
+
 ## Call Stack
 
 ![callstack](https://user-images.githubusercontent.com/16288226/48689298-cd5dfc80-ebef-11e8-8e04-a07c46fc5792.gif)
