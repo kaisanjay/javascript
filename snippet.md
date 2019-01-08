@@ -25,4 +25,22 @@ const numbers3 = new Set(numbers2)
 
 [...numbers3]
 ```
+
+```
+function sum(...numbers) {
+	return numbers.reduce((accumulator, current) => {
+		return accumulator += current;
+	});
+};
+
+function sum(...numbers) {
+	let final = 0
+	for(let i in numbers){
+		final = numbers[i] + final }
+	return final
+};
+
+sum(1,2) // 3
+sum(1,2,3,4,5) // 15
+```
 - reference https://oprea.rocks/blog/what-do-the-three-dots-mean-in-javascript/
