@@ -44,3 +44,20 @@ sum(1,2) // 3
 sum(1,2,3,4,5) // 15
 ```
 - reference https://oprea.rocks/blog/what-do-the-three-dots-mean-in-javascript/
+
+
+
+
+- fizzbuzz
+```
+for(let i =0 ; i < 101; i++) {
+	if( i % 3 === 0 ) {
+		 console.log('fizz', i)}
+	if (i % 5 === 0) {
+		console.log('bizz', i)}
+	if (i % 3 === 0 && i % 5 === 0) {
+		console.log('fizzbuzz', i)}
+	if (! i % 3 === 0 || ! i % 5 === 0) {
+		console.log(i)}
+}
+```
