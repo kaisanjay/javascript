@@ -61,3 +61,25 @@ for(let i =0 ; i < 101; i++) {
 		console.log(i)}
 }
 ```
+
+
+### JavaScript variable number of arguments to function
+```
+Sure, just use the arguments object.
+
+function foo() {
+  for (var i = 0; i < arguments.length; i++) {
+    console.log(arguments[i]);
+  }
+}
+
+
+In Recent browsers, you can accept variable number of arguments with this syntax:
+
+function my_log(...args) {
+     //args is an Array
+     console.log(args);
+     //You can pass this array as parameters to another function
+     console.log(...args);
+}
+```
