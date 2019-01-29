@@ -10,6 +10,8 @@
 
 To align one flex child to the right set it with `margin-left: auto;`
 
+![flex auto](https://user-images.githubusercontent.com/16288226/51912209-bd397900-23f9-11e9-8965-ca493b373ac5.PNG)
+
 ```
 nav > ul {
   display: flex;
