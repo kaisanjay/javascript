@@ -126,7 +126,7 @@ console.log(new_array);         // [true, 2]
 ```
 #### `splice()` -
 `Splice()` has very similar use cases like `concat()` and `splice()`, the only difference is that
-***the operation is made on the original array.
+**the operation is made on the original array.**
 
 It's a destructive method, you won't be able to revert it, so be careful to that when using it.
 
@@ -138,8 +138,27 @@ You can adapt the behavior as you wish. For example splice(start_index, number_o
 
 ```
 var arr = [true, 2, 3, "4"];
-arr.splice(0, 1, 1); // I replace the first item with 1
+arr.splice(0, 1, 1); // It replace the first item with 1
 console.log(arr);                // [1, 2, 3, "4"]
+
+```
+
+```
+var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+
+myFish.splice() // []
+
+myFish.slice() // (5) ["angel", "clown", "drum", "mandarin", "sturgeon"]
+
+splice will change the origial array and it returns what is being changed but the ariginal array will be distorted
+
+myFish.splice(1) // ["clown", "drum", "mandarin", "sturgeon"]
+
+myFish // ["angel"]
+
+the splice operation outputs diffent and the original array is differenet
+
+array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
 
 ```
 
