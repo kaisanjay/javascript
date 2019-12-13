@@ -246,4 +246,39 @@ console.log(concatenate); // '987654321'
 ```
 
 
+## Other Methods
+
+- Array.prototype.flat()
+
+The `flat()` method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+
+```
+var arr1 = [1, 2, [3, 4]];
+arr1.flat(); 
+// [1, 2, 3, 4]
+
+var arr2 = [1, 2, [3, 4, [5, 6]]];
+arr2.flat();
+// [1, 2, 3, 4, [5, 6]]
+
+var arr3 = [1, 2, [3, 4, [5, 6]]];
+arr3.flat(2);
+// [1, 2, 3, 4, 5, 6]
+
+var arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
+arr4.flat(Infinity);
+// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+
+##### The flat method removes empty slots in arrays:
+```
+var arr5 = [1, 2, , 4, 5];
+arr5.flat();
+// [1, 2, 4, 5]
+```
+
+
+
+
+
 
