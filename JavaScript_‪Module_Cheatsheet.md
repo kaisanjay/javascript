@@ -54,4 +54,4 @@ console.log("2π = " + sum(pi, pi));
 ```
 
 
-- ref `https://medium.com/dailyjs/javascript-module-cheatsheet-7bd474f1d829`
+- ref [a link](https://medium.com/dailyjs/javascript-module-cheatsheet-7bd474f1d829)
