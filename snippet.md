@@ -83,3 +83,19 @@ function my_log(...args) {
      console.log(...args);
 }
 ```
+
+
+### Checking android device or ios
+
+```
+let andoidURL = (navigator && navigator.platform && (navigator.platform.toUpperCase().indexOf('ARM') > -1) ) ? "https://www.gamezy.com/gamezyapp" : false;
+		let iosURL = (navigator && navigator.platform && (navigator.platform.toUpperCase().indexOf('IPHONE') > -1) ) ? "https://apps.apple.com/us/app/gamezy-fantasy-cricket/id1490415018?ls=1" : false;
+		let shoudLinkShow = !!iosURL || !!andoidURL;
+		let downloadAppUrl = andoidURL ? andoidURL : iosURL;
+	
+	
+	
+render return
+
+{shoudLinkShow ? <li><a target="_blank" href={downloadAppUrl}>Download App</a></li> : false}
+```
