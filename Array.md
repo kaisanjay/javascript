@@ -278,6 +278,22 @@ arr5.flat();
 ```
 
 
+### find/findIndex (new in ES6)
+
+JavaScript gives developers Array.prototype.indexOf to get the index of a given item within an array, but indexOf doesn't provide a method to calculate the desired item condition; you also need to search for an exact known value.  Enter find and findIndex -- two methods for searching an array for the first match of a calculated value:
+
+```
+let ages = [12, 19, 6, 4];
+
+let firstAdult = ages.find(age => age >= 18); // 19
+let firstAdultIndex = ages.findIndex(age => age >= 18); // 1
+```
+
+find and findIndex, through allowing a calculated value search, also prevent unnecessary side effects and looping through possible values!
+
+
+
+
 
 
 
