@@ -101,3 +101,21 @@ export const IsEqual = (value, other) => {
 };
 
 ```
+
+- find the element/s in a collection that satisfies a condition.
+```
+const users = [
+  { 'user': 'joey',  'age': 32 },
+  { 'user': 'ross',    'age': 41 },
+  { 'user': 'chandler', 'age': 39 }
+]
+
+// Native
+users.find(function (o) { return o.age < 40; })
+
+ // {user: "joey", age: 32}
+ 
+ users.find(function (o) { return (o.age < 40 && o.user === 'joey') })
+ 
+ //{user: "joey", age: 32}
+```
