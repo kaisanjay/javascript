@@ -52,6 +52,49 @@ a == b;         // true
 a === b;        // false
 
 ```
+## Comparison operators
+JavaScript has both strict and type–converting comparisons. A strict comparison (e.g., ===) is only true if the operands are of the same type and the contents match. The more commonly-used abstract comparison (e.g. ==) converts the operands to the same type before making the comparison .
+For relational abstract comparisons (e.g., <=), the operands are first converted to primitives, then to the same type, before comparison.
+
+```
+console.log(1 == 1);
+// expected output: true
+
+console.log('1' == 1);
+// expected output: true
+
+console.log(1 === 1);
+// expected output: true
+
+console.log('1' === 1);
+// expected output: false
+```
+
+#### Features of comparisons:
+
+ - Two strings are strictly equal when they have the same sequence of characters, same length, and same characters in corresponding positions.
+ - Two numbers are strictly equal when they are numerically equal (have the same number value). NaN is not equal to anything, including NaN. Positive and negative zeros are equal to one another.
+ - Two Boolean operands are strictly equal if both are true or both are false.
+ - Two distinct objects are never equal for either strict or abstract comparisons.
+ - An expression comparing Objects is only true if the operands reference the same Object.
+ - Null and Undefined Types are strictly equal to themselves and abstractly equal to each other.
+ 
+ 
+```
+ 1    ==  1         // true
+'1'  ==  1         // true
+1    == '1'        // true
+0    == false      // true
+0    == null       // false
+var object1 = {'key': 'value'}, object2 = {'key': 'value'}; 
+object1 == object2 // false
+0    == undefined  // false
+null == undefined  // true
+```
+
+read more  about Inequality, Relational operators on mdn `https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators`
+ 
+    
 # Ineqality
 ```
 var a = 41;
