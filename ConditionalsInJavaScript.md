@@ -182,3 +182,137 @@ test(undefined); // unknown
 test({ }); // unknown
 test({ name: 'apple', color: 'red' }); // apple
 ```
+
+## Favor Map / Object Literal than Switch Statement
+Let's look at the example below, we want to print fruits based on color:
+```
+function test(color) {
+  // use switch case to find fruits in color
+  switch (color) {
+    case 'red':
+      return ['apple', 'strawberry'];
+    case 'yellow':
+      return ['banana', 'pineapple'];
+    case 'purple':
+      return ['grape', 'plum'];
+    default:
+      return [];
+  }
+}
+
+//test results
+test(null); // []
+test('yellow'); // ['banana', 'pineapple']
+```
+
+The above code seems nothing wrong, but I find it quite verbose. The same result can be achieve with object literal with cleaner syntax:
+
+```
+// use object literal to find fruits in color
+  const fruitColor = {
+    red: ['apple', 'strawberry'],
+    yellow: ['banana', 'pineapple'],
+    purple: ['grape', 'plum']
+  };
+
+function test(color) {
+  return fruitColor[color] || [];
+}
+```
+
+Alternatively, you may use Map to achieve the same result:
+```
+// use Map to find fruits in color
+  const fruitColor = new Map()
+    .set('red', ['apple', 'strawberry'])
+    .set('yellow', ['banana', 'pineapple'])
+    .set('purple', ['grape', 'plum']);
+
+function test(color) {
+  return fruitColor.get(color) || [];
+}
+```
+
+Map is the object type available since ES2015, allow you to store key value pair.
+
+Should we ban the usage of switch statement? Do not limit yourself to that. Personally, I use object literal whenever possible, but I wouldn't set hard rule to block that, use whichever make sense for your scenario.
+
+#### TL;DR; Refactor the syntax
+For the example above, we can actually refactor our code to achieve the same result with Array.filter .
+```
+ const fruits = [
+    { name: 'apple', color: 'red' }, 
+    { name: 'strawberry', color: 'red' }, 
+    { name: 'banana', color: 'yellow' }, 
+    { name: 'pineapple', color: 'yellow' }, 
+    { name: 'grape', color: 'purple' }, 
+    { name: 'plum', color: 'purple' }
+];
+
+function test(color) {
+  // use Array filter to find fruits in color
+
+  return fruits.filter(f => f.color == color);
+}
+```
+
+There's always more than 1 way to achieve the same result. We have shown 4 with the same example. Coding is fun!
+
+## Use Array.every & Array.some for All / Partial Criteria
+
+This last tip is more about utilizing new (but not so new) Javascript Array function to reduce the lines of code. Look at the code below, we want to check if all fruits are in red color:
+
+```
+const fruits = [
+    { name: 'apple', color: 'red' },
+    { name: 'banana', color: 'yellow' },
+    { name: 'grape', color: 'purple' }
+  ];
+
+function test() {
+  let isAllRed = true;
+
+  // condition: all fruits must be red
+  for (let f of fruits) {
+    if (!isAllRed) break;
+    isAllRed = (f.color == 'red');
+  }
+
+  console.log(isAllRed); // false
+}
+```
+
+ - The code is so long! We can reduce the number of lines with Array.every:
+ 
+ ```
+ const fruits = [
+    { name: 'apple', color: 'red' },
+    { name: 'banana', color: 'yellow' },
+    { name: 'grape', color: 'purple' }
+  ];
+
+function test() {
+  // condition: short way, all fruits must be red
+  const isAllRed = fruits.every(f => f.color == 'red');
+
+  console.log(isAllRed); // false
+}
+```
+
+Much cleaner now right? In a similar way, if we want to test if any of the fruit is red, we can use Array.some to achieve it in one line.
+
+```
+
+const fruits = [
+    { name: 'apple', color: 'red' },
+    { name: 'banana', color: 'yellow' },
+    { name: 'grape', color: 'purple' }
+];
+
+function test() {
+  // condition: if any fruit is red
+  const isAnyRed = fruits.some(f => f.color == 'red');
+
+  console.log(isAnyRed); // true
+}
+```
