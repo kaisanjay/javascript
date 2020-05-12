@@ -124,3 +124,38 @@ Wait, how can all three of those comparisons be false? Because the b value is be
 less than any other value.
 
 The == comparison fails for a different reason. a == b could fail if it’s interpreted either as 42 == NaN or "42" == "foo"—as we explained earlier, the former is the case.
+
+
+# Comma operator
+
+ - ` , ` is an operator that separates expressions and returns the last expression in the chain.
+
+The comma operator (,) evaluates each of its operands (from left to right) and returns the value of the last operand. This lets you create a compound expression in which multiple expressions are evaluated, with the compound expression's final value being the value of the rightmost of its member expressions. This is commonly used to provide multiple parameters to a for loop.
+
+```
+let expr = (99, 88, 77)
+expr // 77
+```
+We have three primary expressions 99, 88 and 77. *** All are evaluated *** and the last is assigned to expr.
+
+
+```
+let x = 1;
+
+x = (x++, x);
+
+console.log(x);
+// expected output: 2
+
+x = (2, 3);
+
+console.log(x);
+// expected output: 3
+```
+
+ ### Tip
+ You can use the comma operator when you want to include multiple expressions in a location that requires a single expression. The most common usage of this operator is to supply multiple parameters in a for loop.
+
+ - The comma operator is fully different from the comma within arrays, objects, and function arguments and parameters.
+ 
+
