@@ -4,7 +4,7 @@
 4. Favor Map / Object Literal than Switch Statement
 5. Use Array.every & Array.some for All / Partial Criteria
 
-##  Use `Array.includes` for Multiple Criteria
+##  1. Use `Array.includes` for Multiple Criteria
 
 Let's take a look at the example below:
 ```
@@ -32,7 +32,7 @@ function test(fruit) {
 ```
 We extract the red fruits (conditions) to an array. By doing this, the code looks tidier.
 
-## Less Nesting, Return Early
+## 2.Less Nesting, Return Early
 
 Let's expand the previous example to include two more conditions:
  - if no fruit provided, throw error
@@ -120,7 +120,7 @@ For me, I would just leave it as the previous version (condition 2 with nested).
  - the code is short and straight forward, it is clearer with nested if
  - inverting condition may incur more thinking process (increase cognitive load)
  
- ## Use Default Function Parameters and Destructuring
+ ## 3. Use Default Function Parameters and Destructuring
  I guess the code below might look familiar to you, we always need to check for `null / undefined` value and assign default value when working with JavaScript:
  
  ```
@@ -183,7 +183,7 @@ test({ }); // unknown
 test({ name: 'apple', color: 'red' }); // apple
 ```
 
-## Favor Map / Object Literal than Switch Statement
+## 4. Favor Map / Object Literal than Switch Statement
 Let's look at the example below, we want to print fruits based on color:
 ```
 function test(color) {
@@ -258,7 +258,7 @@ function test(color) {
 
 There's always more than 1 way to achieve the same result. We have shown 4 with the same example. Coding is fun!
 
-## Use Array.every & Array.some for All / Partial Criteria
+## 5.Use Array.every & Array.some for All / Partial Criteria
 
 This last tip is more about utilizing new (but not so new) Javascript Array function to reduce the lines of code. Look at the code below, we want to check if all fruits are in red color:
 
