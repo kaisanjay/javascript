@@ -158,4 +158,9 @@ console.log(x);
 
  - The comma operator is fully different from the comma within arrays, objects, and function arguments and parameters.
  
+ This comes in handy when we want to write short lambda functions:
+`const lb = (a, b, arr) => (arr.push(a*b), a*b)`
+There are two statements here, the first push the multiplication result to the array arr and the second multiples a and b. The result of the second is what is returned to the caller.
+It is also useful with the ternary operator since, same as the short lambda syntax, it only accepts expressions rather than statements
+ 
 
