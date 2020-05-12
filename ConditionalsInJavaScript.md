@@ -1,3 +1,5 @@
+# Tips to Write Better Conditionals in JavaScript
+
 1. Use Array.includes for Multiple Criteria
 2. Less Nesting, Return Early
 3. Use Default Function Parameters and Destructuring
