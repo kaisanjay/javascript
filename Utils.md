@@ -119,3 +119,19 @@ users.find(function (o) { return o.age < 40; })
  
  //{user: "joey", age: 32}
 ```
+
+- Multiple CSS conditional classes using React
+dirty
+```
+<li className={`list-group-item ${todo.completed ? " strike-through" : ""} ${todo.priority === 1 ? "alert alert-info" : (todo.priority === 2 ? "alert alert-warning" : "alert alert-danger")}`} />
+```
+
+more readable
+```
+const completed = todo.completed ? " strike-through" : "";
+const priority = todo.priority === 1 ? "alert alert-info" : (todo.priority === 2 ? "alert alert-warning" : "alert alert-danger");
+...
+<li className={`list-group-item ${completed} ${priority}`} />
+```
+
+
