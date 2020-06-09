@@ -126,6 +126,24 @@ dirty
 <li className={`list-group-item ${todo.completed ? " strike-through" : ""} ${todo.priority === 1 ? "alert alert-info" : (todo.priority === 2 ? "alert alert-warning" : "alert alert-danger")}`} />
 ```
 
+- How to get the first element of an array?
+Better way to get the first element without jQuery: 
+```
+Element of index 0 may not exist if the first element has been deleted:
+function first(p) {
+  for (let i in p) return p[i];
+}
+
+console.log( first(['a', 'b', 'c']) );
+
+Using ES6 destructuring
+let [first] = [1,2,3];
+
+Which is the same as
+
+let first = [1,2,3][0];
+```
+
 more readable
 ```
 const completed = todo.completed ? " strike-through" : "";
