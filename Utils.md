@@ -144,6 +144,12 @@ Which is the same as
 let first = [1,2,3][0];
 ```
 
+- if you don't need to pass arguments to function, just remove () from function like below:
+`<td><span onClick={this.toggle}>Details</span></td>`
+
+- but if you want to pass arguments, you should do like below:
+`<td><span onClick={(e) => this.toggle(e,arg1,arg2)}>Details</span></td>`
+
 more readable
 ```
 const completed = todo.completed ? " strike-through" : "";
