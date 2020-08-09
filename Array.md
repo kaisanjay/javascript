@@ -162,6 +162,11 @@ array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
 
 ```
 
+
+***splice()'s first parameter represents the index on the array from which to begin removing elements, while the second parameter indicates the number of elements to delete.***
+
+
+
 ### Iterative methods -
 
 Iterative methods are very versatile and used in many scenarios. You will most likely encounter them even when working with the latest frameworks as well (angular, react, vue).
