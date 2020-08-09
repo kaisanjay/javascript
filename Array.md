@@ -164,6 +164,7 @@ array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
 
 
 ***splice()'s first parameter represents the index on the array from which to begin removing elements, while the second parameter indicates the number of elements to delete.***
+***splice() can take up to three parameters? Well, you can use the third parameter, comprised of one or more element(s), to add to the array.***
 
 
 
