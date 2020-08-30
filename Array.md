@@ -251,6 +251,34 @@ console.log(concatenate); // '987654321'
 
 ```
 
+###### more example of `reduce`
+```
+let’s pretend we have a server that sends us an array of Pokemon objects like so:
+
+const pokemon = [
+  { name: "charmander", type: "fire" },
+  { name: "squirtle", type: "water" },
+  { name: "bulbasaur", type: "grass" }
+]
+
+We want to change this object to look like:
+
+const pokemonModified = {
+  charmander: { type: "fire" },
+  squirtle: { type: "water" },
+  bulbasaur: { type: "grass" }
+};
+
+const getMapFromArray = data =>
+  data.reduce((acc, item) => {
+    // add object key to our object i.e. charmander: { type: 'water' }
+    acc[item.name] = { type: item.type };
+    return acc;
+  }, {});
+
+
+```
+
 
 ## Other Methods
 
