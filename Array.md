@@ -251,6 +251,33 @@ console.log(concatenate); // '987654321'
 
 ```
 
+# explanation of reduce
+reference https://alligator.io/js/finally-understand-reduce/
+`arr.reduce(callback, initialValue);`
+in the callback we have accumalator(the starting value or point) and current value
+### Terminology
+Reduce comes with some terminology such as **reducer** & **accumulator**. The **accumulator** is the value that we end with **and** the **reducer** is what action we will perform in order to get to one value.
+
+You must remember that a reducer will only return one value and one value only hence the name reduce.
+
+```
+/* this is our initial value i.e. the starting point*/
+const initialValue = 0;
+
+/* numbers array */
+const numbers = [5, 10, 15];
+
+/* reducer method that takes in the accumulator and next item */
+const reducer = (accumulator, item) => {
+  return accumulator + item;
+};
+
+/* we give the reduce method our reducer function
+  and our initial value */
+const total = numbers.reduce(reducer, initialValue)
+```
+
+
 ###### more example of `reduce`
 ```
 let’s pretend we have a server that sends us an array of Pokemon objects like so:
@@ -275,6 +302,9 @@ const getMapFromArray = data =>
     acc[item.name] = { type: item.type };
     return acc;
   }, {});
+  
+  here **accumulator** in starting is {} 
+  **item** is the specific item we are iterating over like { name: "charmander", type: "fire" } this for first iterartion.  
 
 
 ```
