@@ -300,14 +300,14 @@ totalHitPoints(1,2,3,4,5,6,7,) // 28
 ###### note
 ```
 let avlCTypes = [
-0: {contests: Array(5), nm: "JOIN_THIS", desc: null, img: null}
-1: {contests: Array(2), nm: "BONUS CONTEST", desc: null, img: null}
-2: {contests: Array(2), nm: "BONUSONLY", desc: null, img: null}
-3: {contests: Array(1), nm: "CORONABONUS", desc: null, img: null}
-4: {contests: Array(4), nm: "Mega Contest", desc: null, img: null}
-5: {contests: Array(3), nm: "Head 2 Head", desc: null, img: null}
-6: {contests: Array(1), nm: "GamezyLite", desc: null, img: null}
-7: {contests: Array(1), nm: "Daily Free Contests", desc: null, img: null} ]
+ {contests: Array(5), nm: "JOIN_THIS", desc: null, img: null},
+ {contests: Array(2), nm: "BONUS CONTEST", desc: null, img: null},
+ {contests: Array(2), nm: "BONUSONLY", desc: null, img: null},
+ {contests: Array(1), nm: "CORONABONUS", desc: null, img: null},
+ {contests: Array(4), nm: "Mega Contest", desc: null, img: null},
+ {contests: Array(3), nm: "Head 2 Head", desc: null, img: null},
+ {contests: Array(1), nm: "GamezyLite", desc: null, img: null},
+ {contests: Array(1), nm: "Daily Free Contests", desc: null, img: null} ]
 let allFilters = [];
 ```
 
@@ -320,10 +320,10 @@ for (const item in avlCTypes) {
     }
     console.log(allFilters)
     
-	    // [ 0: {0_1: Array(8), isSelected: false}
-		 1: {0_101: Array(2), isSelected: false}
-		 2: {2_1: Array(3), isSelected: false}
-		 3: {4_1: Array(1), isSelected: false}
+	    // [  {0_1: Array(8), isSelected: false},
+		  {0_101: Array(2), isSelected: false},
+		  {2_1: Array(3), isSelected: false},
+		  {4_1: Array(1), isSelected: false}]
 
 ```
 
@@ -337,10 +337,10 @@ for (const item in avlCTypes) {
     }
     console.log(allFilters)
     
-    [   0: {item: Array(8), isSelected: false}
-	1: {item: Array(2), isSelected: false}
-	2: {item: Array(3), isSelected: false}
-	3: {item: Array(1), isSelected: false} ]
+    [    {item: Array(8), isSelected: false},
+	 {item: Array(2), isSelected: false},
+	 {item: Array(3), isSelected: false},
+	 {item: Array(1), isSelected: false} ]
 	
 ```
 
