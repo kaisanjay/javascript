@@ -295,3 +295,50 @@ totalHitPoints(1,2,3,4,5,6,7,) // 28
 ```
 
 
+```
+let avlCTypes = [
+0: {contests: Array(5), nm: "JOIN_THIS", desc: null, img: null}
+1: {contests: Array(2), nm: "BONUS CONTEST", desc: null, img: null}
+2: {contests: Array(2), nm: "BONUSONLY", desc: null, img: null}
+3: {contests: Array(1), nm: "CORONABONUS", desc: null, img: null}
+4: {contests: Array(4), nm: "Mega Contest", desc: null, img: null}
+5: {contests: Array(3), nm: "Head 2 Head", desc: null, img: null}
+6: {contests: Array(1), nm: "GamezyLite", desc: null, img: null}
+7: {contests: Array(1), nm: "Daily Free Contests", desc: null, img: null} ]
+let allFilters = [];
+```
+
+### note the boxbracket around the `item` when pushing to the `allFilters` without these box brackets they just act as key string like key which is static. if you want it to make dynamic you have to put box bracket around it 
+```
+for (const item in avlCTypes) {
+            console.log(item, 'item')
+            allFilters.push({ [item]: avlCTypes[item], isSelected: false });
+            // note boxbracket
+    }
+    console.log(allFilters)
+    
+	    // [ 0: {0_1: Array(8), isSelected: false}
+		 1: {0_101: Array(2), isSelected: false}
+		 2: {2_1: Array(3), isSelected: false}
+		 3: {4_1: Array(1), isSelected: false}
+
+```
+
+without bracket
+
+```
+for (const item in avlCTypes) {
+            console.log(item, 'item')
+            allFilters.push({ item: avlCTypes[item], isSelected: false });
+            // note boxbracket
+    }
+    console.log(allFilters)
+    
+    [   0: {item: Array(8), isSelected: false}
+	1: {item: Array(2), isSelected: false}
+	2: {item: Array(3), isSelected: false}
+	3: {item: Array(1), isSelected: false} ]
+	
+```
+
+
