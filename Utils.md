@@ -295,6 +295,9 @@ totalHitPoints(1,2,3,4,5,6,7,) // 28
 ```
 
 
+
+
+###### note
 ```
 let avlCTypes = [
 0: {contests: Array(5), nm: "JOIN_THIS", desc: null, img: null}
