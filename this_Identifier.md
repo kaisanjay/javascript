@@ -73,3 +73,17 @@ add.call(o, 5, 7); // 16
 // members are used as the arguments in the function call
 add.apply(o, [10, 20]); // 34
 ```
+
+##### What does “this” refer to in arrow functions in ES6?
+```
+function Person(){
+  this.age = 0;
+
+  setInterval(() => {
+    this.age++; // |this| properly refers to the person object
+  }, 1000);
+}
+
+var p = new Person();
+```
+**So, to directly answer your question, `this` inside your arrow function would have the same value as it did right before the arrow function was assigned.**
