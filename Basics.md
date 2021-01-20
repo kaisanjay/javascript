@@ -44,6 +44,23 @@ from a variable that has no value set yet, like with the var a; line at the top 
 A variable can get to this “undefined” value state in several different ways, including functions that return 
 no values and usage of the void operator.
 
+### JavaScript falsy values
+> `false`	 - The keyword false.
+
+> `0`, `-0`	 - The Number zero and negative zero (so, also 0.0/-0.0, etc., 0x0/-0x0).
+ 0n, -0n	The BigInt zero and negative zero (so, also 0x0n/-0x0n).
+ 
+> `""`, `''`, ` `` `	 - Empty string value.
+
+> `null`	 - null — the absence of any value.
+
+> `undefined` - 	undefined — the primitive value.
+
+> `NaN`	- NaN — not a number.
+
+> `document.all` - 	Objects are falsy if and only if they have the [[IsHTMLDDA]] internal slot.
+That slot only exists in document.all and cannot be set using JavaScript.
+
 
 # Equality
 ```
