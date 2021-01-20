@@ -1,6 +1,5 @@
 # Prototype
-***
-When you reference a property on an object, if that property doesn’t exist, JavaScript will automatically use that object’s internal prototype reference to find another object to look for the property on. You could think of this almost as a fallback if the property is missing. ***
+***When you reference a property on an object, if that property doesn’t exist, JavaScript will automatically use that object’s internal prototype reference to find another object to look for the property on. You could think of this almost as a fallback if the property is missing***
 The internal prototype reference linkage from one object to its fallback happens at the time the object is created. The simplest way to illustrate it is with a built-in utility called `Object.create(..)`.
 
 consider:
