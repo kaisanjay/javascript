@@ -345,3 +345,81 @@ for (const item in avlCTypes) {
 ```
 
 
+### sessionManager
+```
+import queryString from 'query-string';
+
+export const sessionManager = (function(){
+    let UserId = null,
+    setUserId = function(userId) {
+        UserId = userId;
+        if(window && window["document"]) {
+            window["document"]["cookie"] = `loggedInId=${userId}`;
+            localStorage['loggedInId'] = userId;
+        }
+    },
+    getUserId = function() {
+        return UserId;
+    },
+    removeUserId = function() {
+        setUserId(null);
+        UserId = null;
+    };
+
+    if(window && window["document"] && !UserId) {
+        UserId = localStorage['loggedInId'];
+        let logInSet = document.cookie.split(';').find(e => e.indexOf('loggedInId') > -1);
+        UserId = !logInSet ? null : logInSet.split('=')[1] ? logInSet.split('=')[1].trim() : null;
+    }
+
+    return {
+        getUserId,
+        setUserId,
+        removeUserId
+    }
+})();
+
+
+
+export const ifUserLoggedIn = () => {
+    let loggedInUserId = sessionManager.getUserId();
+    if(!loggedInUserId || loggedInUserId == "undefined" || loggedInUserId == "null" || loggedInUserId.length == 0) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+
+
+export const onClickRetry = () => {
+    window.location.reload();
+}
+
+
+
+export const handleShareButton = (referralCode) => {
+    // returns a promise
+    return new Promise((resolve, reject) => {
+        if (navigator.share) {
+            navigator
+                .share({
+                    text: `Can you beat me in Fantasy Cricket? Challenge me on Gamezy: Click on the link and use my invite code: ${referralCode} to receive Rs. 100 bonus on signing up and playing your first game `,
+                    url: `https://gamezy.com`
+                })
+                .then(()=> resolve(true))
+                .catch(() => reject(false))
+
+        } else {
+            reject(false)
+        }
+    });
+}
+
+export const copyToClipBoard = (info) => {
+    // returns a promise
+    return navigator.clipboard.writeText(info)
+}
+```
+
+
