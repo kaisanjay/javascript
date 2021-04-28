@@ -1,0 +1,17 @@
+.square {
+    border: 2px solid black;
+    background-color: cornsilk;
+    width: 32%;
+    height: 50px;
+}
+
+.board-wpr {
+
+}
+
+.board-wpr .board-row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 500px;
+}
