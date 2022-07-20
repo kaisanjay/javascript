@@ -1,0 +1,210 @@
+@font-face {
+  font-family: "SF UI Text";
+  src: url("assets/fonts/SFUIText-Light.eot");
+  src: url("assets/fonts/SFUIText-Light.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/SFUIText-Light.woff") format("woff"),
+    url("assets/fonts/SFUIText-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF UI Text";
+  src: url("assets/fonts/SFUIText-LightItalic.eot");
+  src: url("assets/fonts/SFUIText-LightItalic.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/SFUIText-LightItalic.woff") format("woff"),
+    url("assets/fonts/SFUIText-LightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SF UI Text";
+  src: url("assets/fonts/SFUIText-Regular.eot");
+  src: url("assets/fonts/SFUIText-Regular.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/SFUIText-Regular.woff") format("woff"),
+    url("assets/fonts/SFUIText-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF UI Display";
+  src: url("assets/fonts/SFUIDisplay-Regular.eot");
+  src: url("assets/fonts/SFUIDisplay-Regular.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/SFUIDisplay-Regular.woff") format("woff"),
+    url("assets/fonts/SFUIDisplay-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF UI Display";
+  src: url("assets/fonts/SFUIDisplay-Heavy.eot");
+  src: url("assets/fonts/SFUIDisplay-Heavy.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/SFUIDisplay-Heavy.woff") format("woff"),
+    url("assets/fonts/SFUIDisplay-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF UI Display";
+  src: url("assets/fonts/SFUIDisplay-Light.eot");
+  src: url("assets/fonts/SFUIDisplay-Light.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/SFUIDisplay-Light.woff") format("woff"),
+    url("assets/fonts/SFUIDisplay-Light.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF UI Text";
+  src: url("assets/fonts/SFUIText-MediumItalic.eot");
+  src: url("assets/fonts/SFUIText-MediumItalic.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/SFUIText-MediumItalic.woff") format("woff"),
+    url("assets/fonts/SFUIText-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SF UI Display";
+  src: url("assets/fonts/SFUIDisplay-Medium.eot");
+  src: url("assets/fonts/SFUIDisplay-Medium.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/SFUIDisplay-Medium.woff") format("woff"),
+    url("assets/fonts/SFUIDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF UI Display";
+  src: url("assets/fonts/SFUIDisplay-Bold.eot");
+  src: url("assets/fonts/SFUIDisplay-Bold.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/SFUIDisplay-Bold.woff") format("woff"),
+    url("assets/fonts/SFUIDisplay-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF UI Display";
+  src: url("assets/fonts/SFUIDisplay-Black.eot");
+  src: url("assets/fonts/SFUIDisplay-Black.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/SFUIDisplay-Black.woff") format("woff"),
+    url("assets/fonts/SFUIDisplay-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF UI Text";
+  src: url("assets/fonts/SFUIText-BoldItalic.eot");
+  src: url("assets/fonts/SFUIText-BoldItalic.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/SFUIText-BoldItalic.woff") format("woff"),
+    url("assets/fonts/SFUIText-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SF UI Display";
+  src: url("assets/fonts/SFUIDisplay-Ultralight.eot");
+  src: url("assets/fonts/SFUIDisplay-Ultralight.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/SFUIDisplay-Ultralight.woff") format("woff"),
+    url("assets/fonts/SFUIDisplay-Ultralight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF UI Text";
+  src: url("assets/fonts/SFUIText-RegularItalic.eot");
+  src: url("assets/fonts/SFUIText-RegularItalic.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/SFUIText-RegularItalic.woff") format("woff"),
+    url("assets/fonts/SFUIText-RegularItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SF UI Display";
+  src: url("assets/fonts/SFUIDisplay-Thin.eot");
+  src: url("assets/fonts/SFUIDisplay-Thin.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/SFUIDisplay-Thin.woff") format("woff"),
+    url("assets/fonts/SFUIDisplay-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF UI Display";
+  src: url("assets/fonts/SFUIDisplay-Semibold.eot");
+  src: url("assets/fonts/SFUIDisplay-Semibold.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/SFUIDisplay-Semibold.woff") format("woff"),
+    url("assets/fonts/SFUIDisplay-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF UI Text";
+  src: url("assets/fonts/SFUIText-HeavyItalic.eot");
+  src: url("assets/fonts/SFUIText-HeavyItalic.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/SFUIText-HeavyItalic.woff") format("woff"),
+    url("assets/fonts/SFUIText-HeavyItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SF UI Text";
+  src: url("assets/fonts/SFUIText-Heavy.eot");
+  src: url("assets/fonts/SFUIText-Heavy.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/SFUIText-Heavy.woff") format("woff"),
+    url("assets/fonts/SFUIText-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF UI Text";
+  src: url("assets/fonts/SFUIText-Bold.eot");
+  src: url("assets/fonts/SFUIText-Bold.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/SFUIText-Bold.woff") format("woff"),
+    url("assets/fonts/SFUIText-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF UI Text";
+  src: url("assets/fonts/SFUIText-Semibold.eot");
+  src: url("assets/fonts/SFUIText-Semibold.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/SFUIText-Semibold.woff") format("woff"),
+    url("assets/fonts/SFUIText-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF UI Text";
+  src: url("assets/fonts/SFUIText-SemiboldItalic.eot");
+  src: url("assets/fonts/SFUIText-SemiboldItalic.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/SFUIText-SemiboldItalic.woff") format("woff"),
+    url("assets/fonts/SFUIText-SemiboldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SF UI Text";
+  src: url("assets/fonts/SFUIText-Medium.eot");
+  src: url("assets/fonts/SFUIText-Medium.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/SFUIText-Medium.woff") format("woff"),
+    url("assets/fonts/SFUIText-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
