@@ -1,0 +1,609 @@
+/* You can add global styles to this file, and also import other style files */
+@import './app/styles/fonts.scss';
+
+html {
+  min-width: 100% !important;
+  background: #fff !important;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
+  font-family: 'SF UI Text';
+  font-weight: normal;
+  font-style: normal;
+
+  background: #fff;
+  margin: 0;
+}
+
+input {
+  font-family: 'SF UI Text' !important;
+  color: #14151a !important;
+  font-weight: 300;
+  font-style: normal;
+  outline: none;
+  border: none;
+  width: 100%;
+
+}
+
+textarea {
+  font-family: 'SF UI Text' !important;
+  font-weight: normal;
+  font-style: normal;
+  outline: none;
+  width: 100%;
+  font-size: 13px;
+  text-align: left;
+  color: #adb0ba;
+
+}
+
+button {
+  outline: none;
+}
+
+.textleft {
+  text-align: left;
+}
+
+.textright {
+  text-align: right;
+}
+
+.displayflex {
+  display: flex;
+}
+
+#toasty .toast {
+  width: 465px !important;
+  height: 50px !important;
+  border-radius: 3px !important;
+  background-color: #ffeff1 !important;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.25) !important;
+  border: solid 2px #df808c !important;
+  text-align: left;
+}
+
+#toasty .toast.toasty-theme-default .toast-text .toast-title {
+  font-size: 13px !important;
+  text-align: left !important;
+  color: #d0021b !important;
+  font-weight: 100 !important;
+}
+
+#toasty .toast.toasty-theme-default.toasty-type-error {
+  background-image: none !important;
+
+}
+
+#toasty .toast.toasty-type-error.toasty-theme-material {
+  box-shadow: 0 0 13px 0 #b8bbca !important;
+  border: solid 2px #52c638 !important;
+  background-color: #ffffff !important;
+}
+
+#toasty .toast.toasty-theme-material .toast-text .toast-title {
+  font-weight: normal !important;
+  color: #52c638 !important;
+  font-size: 13px !important;
+}
+
+#toasty .toast.toasty-theme-material .toast-text {
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+#toasty .close-button {
+  width: 16px;
+  height: 16px;
+  background-image: url(./assets/images/close.svg) !important;
+  z-index: 1;
+  opacity: 1 !important;
+  background-size: 100% 100% !important;
+  margin: 8px 5px;
+}
+
+#toasty .toast.toasty-theme-default .close-button:after {
+  color: transparent !important;
+}
+
+input::-webkit-input-placeholder {
+  font-family: 'SF UI Text' !important;
+  color: #6a6e83 !important;
+  font-weight: 300;
+  font-style: normal;
+}
+
+input:-ms-input-placeholder {
+  font-family: 'SF UI Text' !important;
+  color: #6a6e83 !important;
+  font-weight: 300;
+  font-style: normal;
+}
+
+input:-moz-placeholder {
+  font-family: 'SF UI Text' !important;
+  color: #6a6e83 !important;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.flex-container {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.action-btn {
+  border-radius: 3px;
+  background-color: #3f51b5;
+  padding: 2px 8px 2px 8px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  font-size: 13px !important;
+  height: 36px;
+  padding: 0 21px;
+  text-transform: uppercase;
+
+  &-primary {
+    background-color: #3877e8;
+    color: #fff;
+  }
+
+  &:disabled {
+    background-color: #a4a7b6;
+    border: none;
+    color: #ffffff;
+    cursor: not-allowed;
+    font-weight: 400;
+  }
+
+  &-disabled {
+    background-color: #f4f6f9;
+    border: none;
+    color: #a8b7c7;
+    cursor: not-allowed;
+    font-weight: 400;
+  }
+}
+
+
+.app-name {
+  font-size: 5em;
+  color: #212121;
+}
+
+.info {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  margin-left: 8px;
+}
+
+.info li {
+  display: inline-block;
+  font-size: 2em;
+  color: #212121;
+  margin-right: 32px;
+}
+
+.ml {
+  margin-left: -32px;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid;
+  background-color: #212121;
+  margin: 0px;
+  padding: 0px;
+}
+
+.loading {
+  opacity: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(120deg, #2874f0, #2874f0);
+  padding-top: 25vh;
+  text-align: center;
+  z-index: -1;
+  transition: opacity 0.8s ease-out;
+}
+
+app-root:empty + .loading {
+  opacity: 1;
+  z-index: 100;
+}
+
+.loading p {
+  font-weight: 300;
+  text-align: center;
+  color: #ffffff;
+}
+
+.loading p:nth-child(0) {
+  font-size: 42px;
+  margin-bottom: 25px;
+}
+
+.loading p:nth-child(1) {
+  font-size: 26px;
+  margin-bottom: 159px;
+}
+
+.loading p:nth-child(2) {
+  font-size: 42px;
+}
+
+.mydrp {
+  width: 248px !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding-left: 27px;
+}
+
+.mydrp .selection {
+  width: 100%;
+  padding: 24px 18px !important;
+  background-color: transparent !important;
+}
+
+.mydrp .selectiongroup {
+}
+
+.mydrp .icon-mydrpcalendar {
+  display: inline-block;
+  transform: translatey(-4px);
+}
+
+.mydrp .btnclear {
+  display: none;
+}
+
+.mydrp .btnpicker {
+  margin: 50% 0 !important;
+  padding: 0 25px 0 0 !important;
+}
+
+.mydrp .btnpicker:hover {
+  background: none !important;
+}
+
+.mydrp .icon-mydrpcalendar:before {
+  content: "" !important;
+  border: solid #7d7e82 !important;
+  border-width: 0 1px 1px 0 !important;
+  display: inline-block !important;
+  padding: 4px !important;
+  transform: rotate(45deg) !important;
+  -webkit-transform: rotate(45deg) !important;
+}
+
+/* Custom Scrollbar */
+
+/* width and height */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* custom radio button */
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: #666;
+}
+
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #4742b3;
+  border-radius: 100%;
+  background: #fff;
+}
+
+[type="radio"]:disabled:checked + label:before,
+[type="radio"]:disabled:not(:checked) + label:before {
+  border: 1px solid #a5adba;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #4742b3;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+[type="radio"]:disabled:checked + label:after,
+[type="radio"]:disabled:not(:checked) + label:after {
+  background: #a5adba;
+}
+
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+[type="radio"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+/* Dashboard Filters */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 16px 0;
+}
+
+.filters .filter {
+  margin: 8px;
+  width: calc((100% - 80px) / 6);
+  height: 40px;
+}
+
+.filters .filter:nth-child(6n + 1) {
+  margin-left: 0;
+}
+
+.filters .filter:nth-child(6n) {
+  margin-right: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 21px;
+
+  & &-left {
+    display: flex;
+    justify-content: flex-start;
+
+    &.block {
+      display: block;
+    }
+  }
+
+  & &-right {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &-item {
+    &.auto-margin {
+      margin: auto 0;
+    }
+
+    &:not(:last-child) {
+      margin-right: 13px;
+
+      &.right {
+        margin-left: auto;
+      }
+    }
+
+    &.pipe {
+      position: relative;
+      margin-right: 0;
+      padding: 5px 21px;
+
+      &:not(:last-child):after {
+        content: "";
+        height: 80%;
+        width: 1px;
+        position: absolute;
+        right: 0;
+        background: #a8b8d0;
+        top: 10%;
+      }
+    }
+
+    &.display-flex {
+      display: flex;
+    }
+  }
+
+  &.border {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #a8b7c7;
+  }
+
+  &.no {
+    &-margin {
+      margin-bottom: 0;
+    }
+
+    &-padding {
+      padding: 0;
+    }
+  }
+
+  &.margin {
+    &-medium {
+      margin-bottom: 13px;
+    }
+
+    &-small {
+      margin-bottom: 8px;
+    }
+  }
+
+  &.padding-bottom {
+    &-medium {
+      padding-bottom: 13px;
+    }
+
+    &-small {
+      padding-bottom: 8px;
+    }
+
+    &-zero {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.page-header {
+  font-family: "SF UI Text", serif;
+  font-size: 22px;
+  font-weight: 300;
+  color: #14151a;
+}
+
+.section {
+  @import "src/app/styles/table";
+}
+
+.inline-block{
+  display: inline-block;
+}
+
+.nodata-else {
+  border: 1px solid #dad2d2;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  background: #fafbfe;
+}
+
+/* Minimum column width */
+.c-w {
+  &-120 {
+    min-width: 120px;
+  }
+
+  &-150 {
+    min-width: 150px;
+  }
+
+  &-250 {
+    min-width: 250px;
+  }
+}
+
+.main {
+  padding: 30px 0;
+}
+
+.m {
+  &-a {
+    margin: auto;
+  }
+
+  &-r {
+    &-3 {
+      margin-right: 3px;
+    }
+
+    &-5 {
+      margin-right: 5px;
+    }
+
+    &-8 {
+      margin-right: 8px;
+    }
+
+    &-13 {
+      margin-right: 13px;
+    }
+
+    &-21 {
+      margin-right: 21px;
+    }
+
+    &-34 {
+      margin-right: 34px !important;
+    }
+  }
+
+  &-b {
+    &-0 {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.link {
+  color: #2874f0;
+  text-decoration: none;
+  cursor: pointer;
+
+  &.disable {
+    color: gray;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.heading{
+  font-size: 22px;
+  font-weight: 300;
+}
