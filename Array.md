@@ -6,7 +6,7 @@
 
 ## Declaring an array
 
-Javascript’s elegance owes a lot to its concise literal syntax for the most common building blocks: object, functions and array.
+Javascript’s elegance owes a lot to its concise literal syntax for the most common building blocks: object, functions and array.<br />
 A literal is the best way to express an array:
 
 ` var arr = [1, 2, 3, 4]; `
