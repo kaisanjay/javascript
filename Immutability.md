@@ -20,23 +20,22 @@ bcz arrays are not immutable bydefault<img width="353" alt="Screenshot 2022-10-0
 
 
 const o = [] </br>
-undefined
-const y = [...o, 'ge', 'yu']
-undefined
-o
-[]
-y
-(2) ['ge', 'yu']
-const t = o;
-undefined
-t.push
-ƒ push() { [native code] }
-t.push('mutable')
-1
-t
-['mutable']
-o
-['mutable']
-y
-(2) ['ge', 'yu']
+*undefined* </br>
+const y = [...o, 'ge', 'yu'] </br>
+*undefined* </br>
+o </br>
+*[]* </br>
+y </br>
+*(2) ['ge', 'yu']* </br>
+const t = o; </br>
+*undefined* </br>
+
+t.push('mutable') </br>
+*1* `//push returns the length of array` </br> 
+t </br>
+*['mutable']* </br>
+o </br>
+*['mutable']* </br>
+y</br>
+*(2) ['ge', 'yu']* </br>
 
