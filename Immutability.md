@@ -15,3 +15,28 @@ and others are not for example slice, map, filter.</br>
 
 take more ref of array methods in array.md
 
+
+bcz arrays are not immutable bydefault<img width="353" alt="Screenshot 2022-10-09 at 8 16 00 PM" src="https://user-images.githubusercontent.com/16288226/194763315-f05c93ba-9939-47e4-bcde-fc8e54398305.png">
+
+
+const o = []
+undefined
+const y = [...o, 'ge', 'yu']
+undefined
+o
+[]
+y
+(2) ['ge', 'yu']
+const t = o;
+undefined
+t.push
+ƒ push() { [native code] }
+t.push('mutable')
+1
+t
+['mutable']
+o
+['mutable']
+y
+(2) ['ge', 'yu']
+
