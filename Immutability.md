@@ -19,7 +19,7 @@ take more ref of array methods in array.md
 bcz arrays are not immutable bydefault<img width="353" alt="Screenshot 2022-10-09 at 8 16 00 PM" src="https://user-images.githubusercontent.com/16288226/194763315-f05c93ba-9939-47e4-bcde-fc8e54398305.png">
 
 
-const o = []
+const o = [] </br>
 undefined
 const y = [...o, 'ge', 'yu']
 undefined
