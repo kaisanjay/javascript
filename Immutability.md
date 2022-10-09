@@ -11,5 +11,7 @@ s[0] = 'u';
 arrays and object are not 
 
 some array methods are destructive like push pop they modify original array,
-and others are not for example slice, map, filter.
+and others are not for example slice, map, filter.</br>
+
+take more ref of array methods in array.md
 
