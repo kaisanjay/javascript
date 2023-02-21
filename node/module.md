@@ -15,3 +15,8 @@ This syntax allows you to define and export modules using the export keyword, an
 However, this syntax requires support from the browser and is not yet universally supported.
 
 [stackoverflow question](https://stackoverflow.com/questions/75517839/what-library-is-used-in-react-to-support-import-and-export)
+
+### Q. do react use any library for module loading?
+A: Yes, React uses a module loading library called Webpack to manage its dependencies and build the final JavaScript bundle for your application.
+
+
