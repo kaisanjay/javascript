@@ -56,3 +56,30 @@ console.log(date1 - date2); // 0
 ```
 
 So, while the dates are considered different objects, their numerical values (timestamps) are the same.
+
+
+if i do this const date1 = new Date('December 17, 1995 03:24:00');
+const date2 = new Date('December 17, 1995 03:24:00');
+
+If you create two `Date` objects with the same date and time using the same string format, such as:
+
+```javascript
+const date1 = new Date('December 17, 1995 03:24:00');
+const date2 = new Date('December 17, 1995 03:24:00');
+```
+
+In this case, both `date1` and `date2` represent the same date and time. However, even though the values are the same, the two date objects are still considered separate instances. Therefore, when comparing them using the `===` operator, it will return `false`.
+
+```javascript
+console.log(date1 === date2); // false
+```
+
+This is because `===` checks for strict equality, comparing the object references. Since `date1` and `date2` are distinct instances of the `Date` object, they have different object references and are not considered equal.
+
+To compare the values of two `Date` objects for equality, you can compare their timestamps using the `getTime()` method:
+
+```javascript
+console.log(date1.getTime() === date2.getTime()); // true
+```
+
+Here, the `getTime()` method returns the number of milliseconds since January 1, 1970, 00:00:00 UTC for each `Date` object. By comparing these timestamps, you can determine if the dates represent the same moment in time.
